@@ -9,17 +9,6 @@ import org.keycloak.services.resource.RealmResourceProvider;
 
 public class MultipartFormDataResourceProvider implements RealmResourceProvider {
 
-    /* support for containerrequestfilter/containerresponsefilter or dynamicfeature in keycloak extensions with 23 onward
-     Hi,
-
-We previously used both a [ContainerRequestFilter](https://jakarta.ee/specifications/platform/8/apidocs/javax/ws/rs/container/containerrequestfilter), and a [ContainerResponseFilter](https://jakarta.ee/specifications/platform/8/apidocs/javax/ws/rs/container/containerresponsefilter) for custom REST Endpoints in our keycloak extension.
-
-I've been trying to update from 22.0.5 to 23.0.5, but I'm running into the issue that these no longer work.
-
-I think it may have worked because of a little workaround we did (we annotated our RealmResource class with @Path(""), which worked for some reason when it was a public nested class of the RealmResourceProvider)  in version 22.0.5, This no longer works in 23.0.5
-
-I requested, I an quickly create a reproducer repository of what I've tried and link to it here.*/
-
     private KeycloakSession session;
 
     public MultipartFormDataResourceProvider(KeycloakSession session) {
